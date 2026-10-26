@@ -4,11 +4,19 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { ServiceComics } from './services/service.comics';
 import { ComicsComponent } from './components/comics-component/comics-component';
+import { provideHttpClient } from '@angular/common/http';
+import { ServicesPersonas } from './services/service.personas';
+import { PersonaApiComponent } from './components/persona-api-component/persona-api-component';
 
 @NgModule({
-  declarations: [App, ComicsComponent],
+  declarations: [App, ComicsComponent, PersonaApiComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [provideBrowserGlobalErrorListeners(), ServiceComics],
+  providers: [
+    provideHttpClient(),
+    provideBrowserGlobalErrorListeners(),
+    ServiceComics,
+    ServicesPersonas,
+  ],
   bootstrap: [App],
 })
 export class AppModule {}
