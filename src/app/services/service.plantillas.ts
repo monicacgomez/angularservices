@@ -19,4 +19,16 @@ export class ServicePlantilla {
         let request = "api/plantilla/plantillafuncion/" + funcion;
         return firstValueFrom(this._http.get<Plantilla[]>(url + request));
     }
+    
+    async getPlantillaFunciones(funciones: Array<string>): Promise<Plantilla[]> {
+        // ?funcion=Enfermera&funcion=Enfermero
+        let content = "";
+        for (let fun of funciones) {
+            content += "funcion=" + fun + "&";
+        }
+        content = content.substring(0, content.length - 1);
+        let url = environment.urlApiPlantilla;
+        let request = "api/plantilla/plantillafunciones?" + content;
+        return firstValueFrom(this._http.get<Plantilla[]>(url + request));
+    }
 }

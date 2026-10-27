@@ -4,12 +4,15 @@ import { ComicsComponent } from './components/comics-component/comics-component'
 import { PersonaApiComponent } from './components/persona-api-component/persona-api-component';
 import { CochesApiComponent } from './components/coches-api-component/coches-api-component';
 import { PlantillaFuncionSimpleComponent } from './components/plantilla-funcion-simple-component/plantilla-funcion-simple-component';
+import { PlantillaFuncionMultipleComponent } from './components/plantilla-funcion-multiple-component/plantilla-funcion-multiple-component';
+
 
 const routes: Routes = [
   {path:"", component: ComicsComponent},
   {path: "personas", component: PersonaApiComponent}, 
   {path: "coches", component: CochesApiComponent},
-  {path: "plantillasimple", component: PlantillaFuncionSimpleComponent}
+  {path: "plantillasimple", component: PlantillaFuncionSimpleComponent},
+  {path: "plantillamultiple", component: PlantillaFuncionMultipleComponent }
 ];
 
 @NgModule({
