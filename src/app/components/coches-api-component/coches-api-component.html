@@ -1,0 +1,9 @@
+<h1> Coches Api Component </h1>
+@for (car of arrayCoches; track car){
+    <h2 style="color:blueviolet">
+        {{car.marca}} {{car.modelo}}
+    </h2>
+    <p style="color: blue;">{{car.conductor}}</p>
+    <img src="{{car.imagen}}" style="width: 130px; height: 130px;"/>
+    <hr/>
+}
