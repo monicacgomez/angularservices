@@ -1,0 +1,66 @@
+:host {
+  display: block;
+  padding: 28px;
+  font-family: Arial, sans-serif;
+  color: #294638;
+}
+
+/* Título */
+h1 {
+  margin: 10px 0 28px;
+  color: #244b38;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Datos de las personas */
+p {
+  margin: 0;
+  padding: 14px 20px;
+  background-color: #e4ede3;
+  color: #294638 !important;
+  font-size: 15px;
+  line-height: 1.6;
+  border-left: 4px solid #64816d;
+}
+
+/* Nombre y edad */
+p[style*="blueviolet"] {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-radius: 10px 10px 0 0;
+  font-weight: 700;
+}
+
+/* Email */
+p[style*="rgb"] {
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-radius: 0 0 10px 10px;
+  border-top: none;
+  color: #294638 !important;
+  font-weight: 400;
+}
+
+/* Efecto hover */
+p:hover {
+  background-color: #d7e5d6;
+  border-left-color: #244b38;
+  transition: background-color 0.25s ease,
+              border-color 0.25s ease;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+  :host {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

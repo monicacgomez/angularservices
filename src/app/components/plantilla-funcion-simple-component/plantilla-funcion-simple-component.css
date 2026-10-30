@@ -1,0 +1,150 @@
+:host {
+  display: block;
+  padding: 28px;
+  font-family: Arial, sans-serif;
+  color: #294638;
+}
+
+/* Título */
+h1 {
+  margin: 10px 0 28px;
+  color: #244b38;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Formulario */
+form {
+  max-width: 600px;
+  margin-bottom: 28px;
+}
+
+/* Etiqueta */
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #294638;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Selector */
+select.form-control {
+  width: 100%;
+  padding: 11px 14px;
+  background-color: #e4ede3;
+  color: #294638;
+  border: 1px solid #b7cdb8;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+select.form-control:focus {
+  border-color: #64816d;
+  box-shadow: 0 0 0 3px rgba(100, 129, 109, 0.18);
+}
+
+/* Botón */
+button {
+  margin-top: 16px;
+  padding: 11px 20px;
+  background-color: #244b38;
+  color: #f5f2e8;
+  border: 1px solid #244b38;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease,
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+button:hover {
+  background-color: #64816d;
+  border-color: #64816d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(36, 75, 56, 0.18);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  margin-top: 28px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid #b7cdb8;
+  border-radius: 10px;
+  background-color: #f5f2e8;
+}
+
+/* Cabecera */
+thead {
+  background-color: #244b38;
+}
+
+th {
+  padding: 15px;
+  background-color: #244b38;
+  color: #f5f2e8;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  border: none;
+}
+
+/* Celdas */
+td {
+  padding: 13px 15px;
+  color: #294638;
+  font-size: 14px;
+  border-bottom: 1px solid #d4e0d3;
+}
+
+/* Filas alternas */
+tbody tr:nth-child(odd) {
+  background-color: #e4ede3;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f5f2e8;
+}
+
+/* Efecto hover */
+tbody tr:hover {
+  background-color: #d7e5d6;
+}
+
+/* Última fila */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+  :host {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+  }
+}

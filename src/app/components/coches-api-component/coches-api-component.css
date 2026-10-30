@@ -1,0 +1,87 @@
+:host {
+  display: block;
+  padding: 28px;
+  font-family: Arial, sans-serif;
+  color: #294638;
+}
+
+/* Título principal */
+h1 {
+  margin: 10px 0 28px;
+  color: #244b38;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Tarjeta de cada coche */
+h2 {
+  margin: 24px 0 0;
+  padding: 20px 20px 8px;
+  background-color: #e4ede3;
+  color: #244b38 !important;
+  border: 1px solid #b7cdb8;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Conductor */
+h2 + p {
+  margin: 0;
+  padding: 8px 20px 16px;
+  background-color: #e4ede3;
+  color: #294638 !important;
+  border-left: 1px solid #b7cdb8;
+  border-right: 1px solid #b7cdb8;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Imagen del coche */
+h2 + p + img {
+  display: block;
+  width: 100% !important;
+  height: 230px !important;
+  padding: 12px;
+  object-fit: cover;
+  background-color: #e4ede3;
+  border: 1px solid #b7cdb8;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  transition: transform 0.3s ease,
+              background-color 0.3s ease;
+}
+
+/* Efecto hover de la imagen */
+h2 + p + img:hover {
+  background-color: #d7e5d6;
+  transform: scale(1.02);
+}
+
+/* Separación entre coches */
+hr {
+  margin: 28px 0;
+  border: none;
+  border-top: 1px solid #c5d6c5;
+  opacity: 0.8;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+  :host {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  h2 + p + img {
+    height: 190px !important;
+  }
+}

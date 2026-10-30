@@ -1,15 +1,11 @@
-<h1 style="color: #3f724e">Service Comics JSON</h1>
+<h1>Service Comics JSON</h1>
 
-@for (comic of arrayComics; track comic) {
-    <h4 style="color:rgba(26, 70, 46, 0.699)">
-        {{ comic.nombre }}
-    </h4>
-
-    <p>{{ comic.descripcion }}</p>
-
-    <img
-        [src]="comic.imagen"
-        style="width:80px; height:100px;"
-        [alt]="comic.nombre"
-    />
-}
+<div class="comics-grid">
+  @for (comic of arrayComics; track comic) {
+    <div class="comic-item">
+      <h4>{{ comic.nombre }}</h4>
+      <p>{{ comic.descripcion }}</p>
+      <img [src]="comic.imagen" [alt]="comic.nombre" />
+    </div>
+  }
+</div>
